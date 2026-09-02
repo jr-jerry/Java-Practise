@@ -2,9 +2,11 @@ public class File1{
     public static void main(String[] args){
         Runnable bottelTask=new MyTask();
         Thread t1=new Thread(bottelTask);
-        t1.setName("Thread T1");
+        Thread t2=new Thread(bottelTask);
 
-        t1.start();
+        t2.setName("Thread T2");
+
+        t2.start();
     }
 }
 class MyTask implements Runnable{
